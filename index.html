@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<tittle>Estudo canvas html</tittle>
+</head>
+<body>
+    <h1>Estudo canvas html</h1>
+    <canvas id='canvas' width='340' height='300' style="border: 5px solid; color: blue">
+    Seu navegador não suporta canvas do html
+    </canvas>
+    <script>
+var canvas  = document.getElementById("canvas");
+    var pincel = canvas.getContext("2d");
+    
+    //Desenho circulo verde  borda 
+    //preta
+    pincel.beginPath();
+    pincel.arc(180, 145, 90, 0, 2 * Math.PI);
+    pincel.fillStyle = 'yellow';
+    pincel.strokeStyle = 'blue';
+    
+    pincel.moveTo(150, 125);
+   pincel.arc(140, 125, 10, 0, Math.PI * 2, true); //Olho esquerdo
+   
+   pincel.moveTo(230, 125);
+   pincel.arc(220, 125, 10, 0, Math.PI * 2, true); //Olho direito
+   
+   pincel.moveTo(250, 150);
+   pincel.arc(180, 140, 70, 2.9, 1150, 1150, Math.PI * 2); // Boca
+   
+   //Texto
+   pincel.font = "20px Arial";
+    pincel.strokeStyle = 'blue';
+    pincel.fillText("Smiley Feliz", 120, 290);
+    
+   
+    pincel.strokeStyle
+   
+    pincel.lineWith = 5;
+    pincel.fill();
+    pincel.stroke();
+    
+    </script>
+</body>
+</html>
